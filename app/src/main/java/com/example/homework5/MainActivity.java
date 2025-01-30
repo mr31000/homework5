@@ -11,10 +11,12 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
+    final int[] count = {0};
     public void btnClick(View view)
     {
         TextView tv1 = (TextView) findViewById(R.id.tv);
-        tv1.setText("Oh, yea, I’ve been clicked!");
+        count[0]++;
+        tv1.setText("This is a click number:" + count[0]);
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
