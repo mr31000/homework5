@@ -16,7 +16,12 @@ public class MainActivity extends AppCompatActivity {
     {
         TextView tv1 = (TextView) findViewById(R.id.tv);
         count[0]++;
-        tv1.setText("This is a click number:" + count[0]);
+        if (count[0] > 6) {
+            tv1.setText("Enough to click. Go to new start!");
+            count[0] = 0;
+        } else {
+            tv1.setText("This is a click number: " + count[0]);
+        }
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
